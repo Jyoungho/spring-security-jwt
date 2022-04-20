@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            maxEntriesLocalHeap="10000"
+            maxEntriesLocalDisk="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"/>
+</ehcache>
+
+
+<!-- eternal: 시간설정에 대한 무시 설정 (boolean), true 면 모든 timeout 설정은 모두 무시 되고 Element에서 캐시가 삭제 되지 않음-->
+<!--        maxElementsInMemory: 메모리에 캐싱 되어질 객체의 최대수-->
+<!--        maxEntriesLocalHeap: 힙메모리 최대량-->
+<!--        timeToIdleSeconds: 다음 시간 동안 유휴상태(Idle) 후 갱신 할 지 설정(default: 0)-->
+<!--        timeToLiveSeconds: 다음 갱신 하기 까지 캐쉬가 유지 되는 시간 (0이면 만료시간을 지정하지 않는다고 보고 유지 되지 않음, default: 0)-->
+<!--        maxElementsOnDisk: 디스크 캐시에 저장 될 최대 객체의 수를 지정-->
+<!--        maxEntriesLocalDisk: 로컬 디스크에 유지 될 최대 객체 수-->
+<!--        maxEntriesInCache: Terracotta의 분산 캐시에서만 사용 가능하며, 클러스터링에 저장 할 수 있는 최대 캐시 수를 설정-->
